@@ -1,0 +1,11 @@
+{
+	"name": "example/phpstan-result-cache-new-file-repro",
+	"description": "Synthetic reproducer: result cache re-analyses all files with errors when a new file appears",
+	"type": "project",
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"ResultCacheCounterexample\\Rules\\": "counterexample/rules/"
+		}
+	}
+}

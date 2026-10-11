@@ -1,0 +1,10 @@
+parameters:
+	level: 8
+	tmpDir: tmp
+	paths:
+		- src
+
+services:
+	-
+		class: ResultCacheCounterexample\Rules\CommandHasHandlerRule
+		tags: [phpstan.rules.rule]
