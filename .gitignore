@@ -1,5 +1,4 @@
 /vendor/
-/composer.lock
 tmp/
 /perf/src/
 /perf/phpstan-baseline.neon

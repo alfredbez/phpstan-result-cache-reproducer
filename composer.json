@@ -3,6 +3,9 @@
 	"description": "Synthetic reproducer: result cache re-analyses all files with errors when a new file appears",
 	"type": "project",
 	"license": "MIT",
+	"require-dev": {
+		"phpstan/phpstan": "2.3.1"
+	},
 	"autoload": {
 		"psr-4": {
 			"ResultCacheCounterexample\\Rules\\": "counterexample/rules/"

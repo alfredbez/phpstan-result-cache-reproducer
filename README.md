@@ -3,11 +3,16 @@
 Synthetic reproducer, no third-party code.
 
 ```sh
-composer require --dev phpstan/phpstan
-composer dump-autoload
+composer install
+python3 verify.py         # asserts the reported behaviour on pinned PHPStan 2.3.1
 perf/run.sh 2000          # cost: one new file re-analyses all 2000 baselined files
 counterexample/run.sh     # soundness: errors that only go away if files without *.notFound errors are re-analysed
 ```
+
+Requires PHP 8.2+, Composer, Python 3 and GNU/Linux for the timing script.
+The GitHub Actions workflow passes when it confirms the reported behaviour;
+green does not mean the performance problem is fixed. `verify.py` fails if
+the expected reanalysis counts change or the correctness case keeps stale errors.
 
 Set `PHPSTAN=/path/to/phpstan-src/bin/phpstan` to run a source checkout instead.
 
